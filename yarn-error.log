@@ -1,0 +1,32 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Perforce;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_91\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Python27;D:\Utils\page-extractor-master;C:\Users\spaudel\Documents\Speech Recognition\Yorvis-9f770b055ca8.json;D:\Utils\curl-7.55.1\AMD64;D:\Utils\ngrok;C:\instantclient_11_1;D:\Utils\xampp\php;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\MongoDB\Server\3.4\bin;C:\Users\spaudel\PycharmProjects\Bugzilla;C:\Program Files\dotnet\;C:\Users\spaudel\Documents\python\natgeo;D:\sqldeveloper-64bit\sqldeveloper;D:\JDAP Setup\JDAP Setup\eclipse-jee-luna-R-win32-x86_64\eclipse;C:\Program Files\PuTTY\;C:\Users\spaudel\PycharmProjects\BugTriage;D:\Utils\logger;C:\Program Files\Git\cmd;C:\python36;C:\python36\Scripts;C:\python36\miniconda3\Scripts;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Users\spaudel\AppData\Local\Programs\Python\Launcher\;C:\Users\spaudel\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\spaudel\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\spaudel\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\spaudel\AppData\Roaming\npm
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  8.11.4
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\spaudel\Documents\Nodejs\zomato\package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at C:\Program Files\nodejs\node_modules\yarn\lib\cli.js:1136:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files\nodejs\node_modules\yarn\lib\cli.js:98:30)
+      at C:\Program Files\nodejs\node_modules\yarn\lib\cli.js:109:13
+      at <anonymous>
+
+npm manifest: 
+  
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,12 @@
+{
+  "name": "zomato",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Sahil Paudel",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "geolocation": "^0.2.0",
+    "https": "^1.0.0"
+  }
+}
