@@ -18,10 +18,9 @@ var getCityInfoByLatLon = (lat, lon, callback) => {
     });
 }
 
-var getCityInfoByCityIds = (array, callback) => {
+var getCityInfoByCityIds = (city_ids, callback) => {
     var query = config.infoCode.cities;
-    var cities = encodeURIComponent(array.toString());
-    var finalQuery = query.concat("?", "city_ids=", cities);
+    var finalQuery = query.concat("?", "city_ids=", city_ids);
     endpoint.getEndPointResponse(finalQuery, (data)=>{
         callback(data);
     });

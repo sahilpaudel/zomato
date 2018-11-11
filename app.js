@@ -34,7 +34,7 @@ app.get('/getCityInfoByLatLon/:lat/:lon', (req, res) => {
 });
 
 app.get('/getCityInfoByCityIds/:city_id', (req, res) => {
-    let city_id = req.params.city_id;
+    let city_id = encodeURIComponent(req.params.city_id);
     common.getCityInfoByCityIds(city_id, (data)=>{
         res.send(data);
     })
