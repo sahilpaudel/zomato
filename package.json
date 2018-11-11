@@ -6,7 +6,10 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",
-    "geolocation": "^0.2.0",
     "https": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
   }
 }
