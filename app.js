@@ -1,13 +1,9 @@
-var common = require('./common/common');
-
-// common.getAllCategories();
-
-// common.getCityInfoByCityIds(Array(3,4,5,6));
-// common.getCityInfoByCityName("Canberra");
-// common.getCityInfoByLatLon(12.956370, 77.695061);
-
-// common.getCollectionsById(4);
-// common.getCollectionsByLatLon(12.956370, 77.695061);
+var categories = require('./common/categories');
+var collections = require('./common/collections');
+var cities = require('./common/cities');
+var cuisines = require('./common/cuisines');
+var est = require('./common/establishments');
+var geocode = require('./common/geocode');
 
 var express = require('express');
 var app = express();
@@ -17,7 +13,7 @@ app.get('/', (req,res)=>{
 });
 
 app.get('/getAllCategories', (req, res) => {
-    common.getAllCategories((data)=>{
+    categories.getAllCategories((data)=>{
         res.send(data);
     });
 });
@@ -28,26 +24,40 @@ app.get('/getCityInfoByLatLon/:lat/:lon', (req, res) => {
     let lat = req.params.lat;
     let lon = req.params.lon;
     
-    common.getCityInfoByLatLon(lat, lon, (data)=>{
+    cities.getCityInfoByLatLon(lat, lon, (data)=>{
         res.send(data);
-    })
+    });
 });
 
 app.get('/getCityInfoByCityIds/:city_id', (req, res) => {
     let city_id = encodeURIComponent(req.params.city_id);
-    common.getCityInfoByCityIds(city_id, (data)=>{
+    cities.getCityInfoByCityIds(city_id, (data)=>{
         res.send(data);
-    })
+    });
 });
 
 app.get('/getCityInfoByCityName/:city_name', (req, res) => {
     let city_name = encodeURIComponent(req.params.city_name);
-    common.getCityInfoByCityName(city_name, (data)=>{
+    cities.getCityInfoByCityName(city_name, (data)=>{
         res.send(data);
-    })
+    });
 });
 
+app.get('/getCollectionsByCityId/:city_id', (req, res) => {
+    let city_id = encodeURIComponent(req.params.city_id);
+    collections.getCollectionsById(city_id, (data)=>{
+        res.send(data);
+    });
+});
+
+app.get('/getCollectionsByLatLon/:lat/:lon', (req, res) => {
+    let lat = req.params.lat;
+    let lon = req.params.lon;
+    collections.getCollectionsByLatLon(lat, lon, (data)=>{
+        res.send(data);
+    });
+});
 
 app.listen(process.env.PORT || 1337, () => {
-    console.log("Server running on port 3000");
+    console.log("Server running on port");
 });
