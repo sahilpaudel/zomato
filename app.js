@@ -58,6 +58,45 @@ app.get('/getCollectionsByLatLon/:lat/:lon', (req, res) => {
     });
 });
 
+app.get('/getCuisinesByCityId/:city_id', (req, res) => {
+    let city_id = encodeURIComponent(req.params.city_id);
+    cuisines.getCuisinesByCityId(city_id, (data)=>{
+        res.send(data);
+    });
+});
+
+app.get('/getCuisinesByLatLon/:lat/:lon', (req, res) => {
+    let lat = req.params.lat;
+    let lon = req.params.lon;
+    cuisines.getCuisinesByLatLon(lat, lon, (data)=>{
+        res.send(data);
+    });
+});
+
+app.get('/getEstablishmentsByCityId/:city_id', (req, res) => {
+    let city_id = encodeURIComponent(req.params.city_id);
+    est.getEstablishmentsByCityId(city_id, (data)=>{
+        res.send(data);
+    });
+});
+
+app.get('/getEstablishmentsByLatLon/:lat/:lon', (req, res) => {
+    let lat = req.params.lat;
+    let lon = req.params.lon;
+    est.getEstablishmentsByLatLon(lat, lon, (data)=>{
+        res.send(data);
+    });
+});
+
+app.get('/getGeocode/:lat/:lon', (req, res) => {
+    let lat = req.params.lat;
+    let lon = req.params.lon;
+    geocode.getGeocode(lat, lon, (data)=>{
+        res.send(data);
+    });
+});
+
+
 app.listen(process.env.PORT || 1337, () => {
     console.log("Server running on port");
 });
